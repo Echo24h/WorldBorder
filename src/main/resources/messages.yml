@@ -1,0 +1,15 @@
+# ----------- Information -----------
+
+# Author: Echo24h
+# This plugin is licensed
+
+# Plugin Page: https://www.spigotmc.org/resources/chatformatting-1-16-x-1-20-x.110900/
+
+# -------- Messages --------
+
+# When a teleport is out of border
+# - {world} : replaced by the word name
+out-of-border-teleport: "&cYou cannot teleport out of the border into the '&e{world}&c'."
+
+# When sending a non-permitted command
+permission-command: "&cYou do not have access to this command"

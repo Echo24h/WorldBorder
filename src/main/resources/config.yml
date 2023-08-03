@@ -1,0 +1,39 @@
+# ----------- Information -----------
+
+# Author: Echo24h
+# This plugin is licensed
+
+# Plugin Page: https://www.spigotmc.org/resources/worldborder-1-13-x-1-20-x.111156/
+
+# Source Code: https://github.com/Echo24h/WorldBorder
+
+# Author Page: https://www.spigotmc.org/members/echo24h.1711225/
+
+# Discord: https://discord.com/invite/Xf3PjwXzKg
+
+# Donation Link: https://www.paypal.com/donate/?hosted_button_id=J4Y27JYWLYLBG
+
+# -------- Permissions --------
+
+# "worldborder.help": Allows access to the help command.
+# "worldborder.set": Allows players to set a world border.
+# "worldborder.delete": Allows players to remove a world border.
+# "worldborder.reload": Allows players to reload the plugin configuration.
+# "worldborder.*": Gives access to all Main commands.
+
+# -------- Config --------
+
+# Disable out-of-border teleportation
+disable-out-of-border-teleport: true
+
+# -------- Borders --------
+
+worlds:
+  world:
+    border_size: 1000
+    center_x: 0
+    center_z: 0
+  world_the_end:
+    border_size: 2000
+    center_x: 100
+    center_z: -200

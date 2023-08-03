@@ -1,0 +1,60 @@
+name: WorldBorder
+version: '${project.version}'
+main: org.echo.worldborder.Main
+api-version: '1.13'
+
+author: Echo24h
+description: A plugin that allows you to control your world borders
+
+softdepend:
+  - Multiverse-Core
+
+permissions:
+  worldborder.help:
+    description: Allows access to the help command.
+    default: true
+  worldborder.list:
+    description: Allows to display list of all worlds and borders.
+    default: op
+  worldborder.set:
+    description: Allows to set a world border.
+    default: op
+  worldborder.delete:
+    description: Allows to delete a world border.
+    default: op
+  worldborder.reload:
+    description: Allows to reload the plugin configuration.
+    default: op
+  worldborder.*:
+    description: Gives access to all WorldBorder commands.
+    default: op
+    children:
+      worldborder.set: true
+      worldborder.remove: true
+      worldborder.reload: true
+      worldborder.list: true
+
+commands:
+  border:
+    description: WorldBorder command for managing world borders.
+    usage: /border <subcommand>
+    aliases: [ worldborder ]
+    permission: worldborder.help
+    subcommands:
+      help:
+        description: Print help of WorldBorder plugin
+        usage: /border help
+        permission: worldborder.help
+      set:
+        description: Set a world border in specific world
+        usage: /border set <world> <size> [centerX] [centerY]
+        permission: worldborder.set
+      delete:
+        description: Delete the world border for a specific world.
+        usage: /border delete <world>
+        permission: worldborder.delete
+      list:
+        description: Print list of all worlds and borders.
+        usage: /border list
+        permission: worldborder.list
+
