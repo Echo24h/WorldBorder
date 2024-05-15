@@ -23,8 +23,8 @@
 
 # -------- Config --------
 
-# Disable out-of-border teleportation
-disable-out-of-border-teleport: true
+# Strictly enforce the world border. A
+enforce: true
 
 # -------- Borders --------
 
