@@ -60,7 +60,7 @@ public class Messages {
         return getMessage("permission-command");
     }
 
-    public String getOutOfBorderTeleport(String worldName) {
-        return getFormattedMessage("out-of-border-teleport", "{world}", worldName);
+    public String getOutOfBounds(String worldName) {
+        return getFormattedMessage("out-of-bounds", "{world}", worldName);
     }
 }
