@@ -1,3 +1,7 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
 # Personals file
 maj.txt
 
