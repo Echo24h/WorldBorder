@@ -5,7 +5,6 @@ import org.echo.worldborder.commands.Commands;
 import org.echo.worldborder.config.Config;
 import org.echo.worldborder.config.Messages;
 import org.echo.worldborder.listener.TeleportListener;
-import org.echo.worldborder.listener.MovementListener;
 
 public final class Main extends JavaPlugin {
 
@@ -23,7 +22,6 @@ public final class Main extends JavaPlugin {
         getCommand("border").setExecutor(new Commands(this));
         getCommand("worldborder").setExecutor(new Commands(this));
         getServer().getPluginManager().registerEvents(new TeleportListener(this), this);
-        getServer().getPluginManager().registerEvents(new MovementListener(this), this);
     }
 
     @Override
@@ -47,5 +45,4 @@ public final class Main extends JavaPlugin {
     public Messages getMessages() {
         return messages;
     }
-
 }

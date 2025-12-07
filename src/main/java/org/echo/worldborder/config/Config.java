@@ -16,7 +16,7 @@ public class Config {
     private YamlConfiguration config;
 
     private Map<String, Border> borders;
-    private boolean enforce;
+    private boolean isDisableOutOfBorderTeleport;
 
     public Config(Main plugin) {
         this.plugin = plugin;
@@ -50,7 +50,7 @@ public class Config {
     }
 
     private void loadConfig() {
-        this.enforce = config.getBoolean("enforce", false);
+        this.isDisableOutOfBorderTeleport = config.getBoolean("disable-out-of-border-teleport", false);
     }
 
     private void loadWorldBorders() {
@@ -105,7 +105,7 @@ public class Config {
         return borders.get(worldName);
     }
 
-    public boolean isEnforce() {
-        return enforce;
+    public boolean isDisableOutOfBorderTeleport() {
+        return isDisableOutOfBorderTeleport;
     }
 }

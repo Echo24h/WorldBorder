@@ -7,8 +7,9 @@
 
 # -------- Messages --------
 
-# When a player attempts to go out of bounds. Use {world} to specify the world name.
-out-of-bounds: "&cYou cannot go that way."
+# When a teleport is out of border
+# - {world} : replaced by the word name
+out-of-border-teleport: "&cYou cannot teleport out of the border into the '&e{world}&c'."
 
 # When sending a non-permitted command
 permission-command: "&cYou do not have access to this command"

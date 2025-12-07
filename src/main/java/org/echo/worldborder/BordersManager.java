@@ -4,7 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.WorldBorder;
 
 import java.util.Map;
 
@@ -67,28 +66,14 @@ public class BordersManager {
         }
     }
 
-    public Location clampToBorder(Location location) {
-        WorldBorder border = location.getWorld().getWorldBorder();
-        double borderSize = border.getSize();
-        int centerX = border.getCenter().getBlockX();
-        int centerZ = border.getCenter().getBlockZ();
-        int x = location.getBlockX();
-        int z = location.getBlockZ();
+    public boolean isInBorder(Location location) {
 
-        Location clampedLoc = location.clone();
+        Border border = plugin.getMyConfig().getBorder(location.getWorld().getName());
 
-        if (x >= centerX + (borderSize / 2))
-            clampedLoc.setX((borderSize / 2) - centerX - 1);
+        if (border != null)
+            if (border.isInBorder(location))
+                return true;
 
-        if (x <= centerX - (borderSize / 2))
-            clampedLoc.setX((-borderSize / 2) + centerX + 1);
-
-        if (z >= centerZ + (borderSize / 2))
-            clampedLoc.setZ((borderSize / 2) - centerZ - 1);
-
-        if (z <= centerZ - (borderSize / 2))
-            clampedLoc.setZ((-borderSize / 2) + centerZ + 1);
-
-        return clampedLoc;
+        return false;
     }
 }
