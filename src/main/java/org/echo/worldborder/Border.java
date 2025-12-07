@@ -25,4 +25,20 @@ public class Border {
     public int getCenterZ() {
         return centerZ;
     }
+
+    public boolean isInBorder(Location location) {
+
+        int x = location.getBlockX();
+        int z = location.getBlockZ();
+
+        if (x > centerX + (borderSize / 2) - 1)
+            return true;
+        if (x < centerX - (borderSize / 2) + 1)
+            return true;
+        if (z > centerZ + (borderSize / 2) - 1)
+            return true;
+        if (z < centerZ - (borderSize / 2) + 1)
+            return true;
+        return false;
+    }
 }
