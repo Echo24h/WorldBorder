@@ -1,8 +1,8 @@
 # WorldBorder Minecraft Plugin
 
-**Plugin page:** [download .jar](https://www.spigotmc.org/resources/worldborder-1-13-x-1-20-x.111156/)
+**Plugin page:** [here](https://www.spigotmc.org/resources/worldborder-1-13-x-1-20-x.111156/)
 
-Tested Minecraft Versions: 1.13 - 1.20
+Tested Minecraft Versions: 1.13 - 1.21
 
 Languages Supported: Custom
 
